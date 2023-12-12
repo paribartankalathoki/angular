@@ -1,0 +1,63 @@
+<form>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>Template Driven Form Example</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-input">
+        <input type="email" class="form-control" name="email" id="email"
+               [(ngModel)]="form.email"
+               (ngModelChange)="onEmailChange($event)" (change)="onEmailChange($event)"
+               placeholder="Enter your email address" />
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="col-sm-6">
+      <div class="form-input">
+      <input type="text" class="form-control" name="phNumber" id="phNumber"
+             [(ngModel)]="form.phoneNumber"
+             placeholder="Enter your phone number" />
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-input">
+        <input type="text" class="form-control" name="fullName" id="fullName"
+               [(ngModel)]="form.fullName"
+               placeholder="Enter your full name" />
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-input">
+        <input type="text" class="form-control" name="age" id="age" [max]="25" [min]="10"
+               [(ngModel)]="form.age" placeholder="Enter your age" />
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-6">
+      <button class="btn btn-sm btn-danger">Cancel</button>
+    </div>
+    <div class="col-sm-6">
+      <button class="btn btn-sm btn-outline-primary float-end" type="submit" (click)="onSubmitForm()">Submit</button>
+    </div>
+  </div>
+</div>
+</form>
